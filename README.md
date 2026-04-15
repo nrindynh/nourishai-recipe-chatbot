@@ -1,6 +1,10 @@
-## Project Information
+## Project Description
 
-NourishAI was developed as part of the **CUHK DSPS3803 AI for Social Good Project**.
+NourishAI is an AI-powered recipe chatbot developed for the **CUHK DSPS3803 AI for Social Good Project**. 
+
+The system allows users to input ingredients, cooking constraints (such as time and difficulty), and dietary preferences to generate personalised recipe suggestions. It leverages the **DeepSeek API** for intelligent response generation and uses **Gradio** to provide an interactive web-based interface.
+
+The project was built by extending an existing open-source repository and transforming it into a fully functional prototype, including backend logic, prompt engineering, API integration, and user interface design.
 
 ## Team Members
 
@@ -45,8 +49,70 @@ https://github.com/arham-kk/recipe-chatbot/assets/108623726/98e19fd0-39df-428d-a
 
 ## Usage
 
-1. Install the required dependencies by running the following command --> `pip install gradio openai`
-2. Set up your OpenAI API credentials by replacing `YOUR_API_KEY` with your actual API key in the code
+### 1. Clone the repository
+```bash
+git clone https://github.com/nrindynh/nourishai-recipe-chatbot.git
+cd nourishai-recipe-chatbot
+```
+
+### 2. Set up a virtual environment
+Create a virtual environment:
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+```bash
+venv\Scripts\activate
+```
+
+**macOS / Linux**
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+If you have a `requirements.txt` file:
+```bash
+pip install -r requirements.txt
+```
+
+If not, install manually:
+```bash
+pip install gradio python-dotenv requests
+```
+
+### 4. Configure environment variables
+Create a `.env` file in the root directory and add your DeepSeek API key:
+```env
+DEEPSEEK_API_KEY=your_api_key_here
+```
+
+### 5. Run the application
+```bash
+python app.py
+```
+
+### 6. Access the application
+After running the script, a local Gradio URL will be displayed in the terminal (e.g., `http://127.0.0.1:7860`). Open this link in your browser to use the chatbot.
+
+### 7. Interact with the chatbot
+1. Enter the following inputs:
+   - Time available (minutes)
+   - Number of people
+   - Cooking experience level
+   - Dietary preference
+   - Available ingredients (comma-separated)
+2. Submit the form
+3. The system will:
+   - Generate a structured prompt based on your inputs
+   - Send the request to the DeepSeek API
+   - Receive a generated recipe response
+4. The recipe output will be displayed in the interface, including:
+   - Ingredients
+   - Step-by-step instructions
 3. Run the application by executing the following command --> `python.app`
 4. Access the application by opening the provided URL in your web browser.
 
