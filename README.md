@@ -37,7 +37,8 @@ Led the end-to-end development of the working prototype, including:
 This project utilizes DeepSeek API to suggest recipes based on a list of ingredients & prefrences provided by the user.
 
 
-https://github.com/arham-kk/recipe-chatbot/assets/108623726/98e19fd0-39df-428d-afff-968e665b2888
+https://github.com/user-attachments/assets/04dc3989-1452-4b98-aaad-4cb99871041d
+
 
 
 ## How it Works
